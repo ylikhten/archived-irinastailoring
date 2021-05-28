@@ -6,14 +6,11 @@ block content
       .col-lg-12
         h1= pageHeader.title
           small &nbsp;#{pageHeader.strapline}
-        a(href='/guest_book/add_review') Add Review
+        a(href='/guestbook/add_review') Add Review
   .row
-    .col-xs-12.col-sm-10
+    .col-xs-12.col-sm-10(ng-controller="reviewListCtrl")
       .row.list-group
-        each review in reviews
-          .col-xs-12.list-group-item
+        .col-xs-12.list-group-item(ng-repeat="review in data.reviews")
             h4
-              p.lead= review.name
-              small &nbsp;#{review.date} #{review.time}
-            .col-xs-12.col-sm-6
-              p.lead= review.review
+              p {{ review.name }}
+              p {{ review.review }}
