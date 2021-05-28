@@ -1,0 +1,29 @@
+extends layout
+
+block content
+
+    .row.page-header
+        .col-lg-12
+            h2= pageHeader
+
+    .row
+      .col-xs-8
+        form.form-horizontal(action="", method="post", role="form")
+          - if(error == "val")
+            .alert.alert-danger(role="alert") All fields required, please try again
+          - if(error == "email")
+            .alert.alert-danger(role="alert") Please input a valid email address, including domain.
+          .form-group
+            label.control-label(for="name") Name
+            .col-xs-6
+              input#name.form-control(name="name")
+          .form-group
+            label.control-label(for="email") Email
+            .col-xs-6
+              input#email.form-control(name="email")
+          .form-group
+            label.control-label(for="review") Review
+            .col-xs-6
+              input#review.form-control(name="review")
+
+          button.pull-right Add Review

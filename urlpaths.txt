@@ -1,0 +1,11 @@
+Main page:
+- About us/ contact information
+- URL: /
+
+Services page:
+- List services or whatever
+- URL: /services
+
+Guest book/ reviews page:
+- Lists reviews
+- URL: /guest_book

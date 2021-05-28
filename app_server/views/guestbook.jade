@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  #banner.page-header
+    .row
+      .col-lg-12
+        h1= pageHeader.title
+          small &nbsp;#{pageHeader.strapline}
+        a(href='/guest_book/add_review') Add Review
+  .row
+    .col-xs-12.col-sm-10
+      .row.list-group
+        each review in reviews
+          .col-xs-12.list-group-item
+            h4
+              p.lead= review.name
+              small &nbsp;#{review.date} #{review.time}
+            .col-xs-12.col-sm-6
+              p.lead= review.review

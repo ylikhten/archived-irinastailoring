@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  .center
+    h1= pageHeader.title
+    small &nbsp;#{pageHeader.strapline}
+    div
+      table.table
+        thead
+          td
+            p: #[a(href='/location_hours') Location and hours &nbsp; ]#[&nbsp; | &nbsp;]
+          td
+            p: #[a(href='/services') Services &nbsp; ]#[ &nbsp; | &nbsp;]
+          td
+            a(href='/guest_book') Guestbook and Reviews
