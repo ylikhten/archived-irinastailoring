@@ -116,7 +116,8 @@ var renderReviewForm = function(req, res){
   res.render('add_review', {
     title: 'New Review',
     pageHeader: 'Add a new review for Irina\'s Tailoring',
-    error: req.query.err
+    error: req.query.err,
+    url: req.originalUrl
   });
 
 };
