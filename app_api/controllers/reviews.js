@@ -1,13 +1,24 @@
+var mongoose = require('mongoose');
+var Rev = mongoose.model('Review');
+
 var sendJsonResponse = function(res, status, content){
     res.status(status);
     res.json(content);
 };
 
-var mongoose = require('mongoose');
-var Rev = mongoose.model('Review');
 
 module.exports.reviewList = function (req, res) {
-    Rev.find().select('name _id date email review').exec(function(err, Rev){ sendJsonResponse(res, 200, Rev); });
+  var revs = [];
+  Rev.find({}, function(err, allReviews) {
+    if (err) {
+      console.log(err);
+      sendJsonResponse(res, 404, err);
+    } else {
+      revs = allReviews;
+      console.log(revs);
+      sendJsonResponse(res, 200, revs);
+    }
+  });
 };
 
 module.exports.addReview = function (req, res) {

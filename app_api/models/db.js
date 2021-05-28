@@ -1,11 +1,11 @@
 var mongoose = require('mongoose');
 
-var dbURI = "mongodb://127.0.0.1/reviews";
+var dbURI = "mongodb://localhost/reviews";
 if(process.env.NODE_ENV == 'production'){
     //dbURI = process.env.MONGOLAB_URI;
     dbURI = "mongodb://ylikhten:ismfof4143@ds125385.mlab.com:25385/reviews";
 }
-mongoose.connect(dbURI, {useNewUrlParser : true});
+mongoose.connect(dbURI);
 
 mongoose.connection.on('connected', function(){
     console.log('Mongoose connected to ' +  dbURI);

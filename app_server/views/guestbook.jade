@@ -9,6 +9,7 @@ block content
         a(href='/guestbook/add_review') Add Review
   .row
     .col-xs-12.col-sm-10(ng-controller="reviewListCtrl")
+      .error {{ message }}
       .row.list-group
         .col-xs-12.list-group-item(ng-repeat="review in data.reviews")
             h4
