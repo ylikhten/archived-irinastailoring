@@ -22,9 +22,13 @@ module.exports.homelist = function (req, res) {
   renderHomepage(req, res);
 };
 
+var renderLocationHoursPage = function (req, res) {
+  res.render('location-hours', {title: 'Location and Hours'});
+};
+
 /* GET location/hours page */
 module.exports.locationHours = function (req, res) {
-  res.render('index', {title: 'Location and Hours'});
+  renderLocationHoursPage(req, res);
 };
 
 /* GET services pages  */
