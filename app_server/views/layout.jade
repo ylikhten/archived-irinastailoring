@@ -6,19 +6,16 @@ html(ng-app='irinasTailoring')
     link(rel='stylesheet', href='bootstrap/css/bootstrap.css')
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
-    .navbar.navbar-default.navbar-fixed-top
+    header
+      a(href='/') Irina's Tailoring
+
+    .main-content
       .container
-        .navbar-header
-          a.navbar-brand(href='/') Irina's Tailoring
-    .container
-      div
         block content 
 
     footer
-      .row
-        .footer
-          .col-xs-12
-            small &copy; Irina's Tailoring 2019
+      .col-xs-12
+        small &copy; Irina's Tailoring 2021
 
   script(src='/angular/angular.min.js')
   script(src='/angular/irinasTailoring.js')

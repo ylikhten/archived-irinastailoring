@@ -2,16 +2,14 @@ extends layout
 
 block content
   #banner.page-header
-    .row
-      .col-lg-12
-        h1= pageHeader.title
-          small &nbsp;#{pageHeader.strapline}
-        a(href='/guestbook/add_review') Add Review
-  .row
+    .col-lg-12
+      h1= pageHeader.title
+        small &nbsp;#{pageHeader.strapline}
+      a(href='/guestbook/add_review') Add Review
     .col-xs-12.col-sm-10(ng-controller="reviewListCtrl")
       .error {{ message }}
-      .row.list-group
+      .list-group
         .col-xs-12.list-group-item(ng-repeat="review in data.reviews")
-            h4
-              p {{ review.name }}
-              p {{ review.review }}
+          h4
+            p {{ review.name }}
+            p {{ review.review }}
