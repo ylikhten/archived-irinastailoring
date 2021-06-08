@@ -12,7 +12,7 @@ var renderHomepage = function (req, res){
     title: 'Irina\'s Tailoring',
     pageHeader: {
       title: 'Irina\'s Tailoring',
-      strapline: 'We\'re a small, family owned business looking to offer the best alteration services in town and around.'
+      strapline: 'Small, family owned business looking to offer the best alteration services in town and around.'
     }
   });
 }
