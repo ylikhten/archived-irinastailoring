@@ -18,6 +18,7 @@
     "jade": "~1.11.0",
     "mongoose": "~5.4.10",
     "morgan": "^1.9.1",
+    "ol": "^6.5.0",
     "package-name": "^0.1.0",
     "request": "^2.88.0",
     "serve-favicon": "~2.4.5",
