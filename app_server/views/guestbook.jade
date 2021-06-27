@@ -2,13 +2,18 @@ extends layout
 
 block content
   #banner.page-header
-      h1= pageHeader.title
-        small &nbsp;#{pageHeader.strapline}
-      a(href='/guestbook/add_review') Add Review
+    h1= pageHeader.title
+      small &nbsp;#{pageHeader.strapline}
     .container(ng-controller="reviewListCtrl")
+      .align-left
+        a(href='/guestbook/add_review') Add Review
       .error {{ message }}
       .list-group
         .list-group-item(ng-repeat="review in data.reviews")
           h4
-            p {{ review.name }}
-            p {{ review.review }}
+            .row
+              .column.smol-left
+                p
+                  #[.name {{ review.name }}.] #[.date {{ review.date }}]
+              .column
+                p {{ review.review }}

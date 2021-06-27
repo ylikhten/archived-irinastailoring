@@ -110,10 +110,31 @@ a:hover, a:focus {
 }
 
 /* css for guestbook page */
-.list-group-item {
-  align-items: left;
+.list-group {
+  text-align: left;
 }
 
+.align-left {
+  display: flex;
+  align-items: left;
+  justify-content: space-between;
+}
+
+.smol-left {
+  width: 20%;
+}
+
+.name {
+  font-size: 28px;
+  font-weight: bold;
+  color: plum;
+}
+
+.date {
+  font-size: 20px;
+  font-weight: normal;
+  color: black;
+}
 
 footer{
     width: 100%;
