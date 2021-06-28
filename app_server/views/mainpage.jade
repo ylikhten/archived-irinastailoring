@@ -1,4 +1,4 @@
-extends layout
+extends ./layout
 
 block content
 
@@ -29,8 +29,9 @@ block content
         p Address 
           p xxxx S. Parker Rd, Parker, CO 
           p Southwest corner of Parker Rd. and Main Street
-          div(id='map')
-        #map
+          div(id='map', class='map')
+        p My Map
+          div.map#map
 
   div.links
     table.table
@@ -41,4 +42,16 @@ block content
           a(href='/guestbook') Guestbook and Reviews
         td
           a(href='/about') About 
-
+  script(type='text/javascript').
+    var map = new ol.Map({
+      target: 'map',
+      layers: [
+        new ol.layer.Tile({
+          source: 'new ol.source.OSM()
+        })
+      ],
+      view: new ol.View({
+        center: ol.proj.fromLonLat([37.41, 8.82]),
+        zoom: 4
+      })
+    });
